@@ -27,8 +27,7 @@ node {
     stage('NPM Install') {
         withEnv(["NPM_CONFIG_LOGLEVEL=warn"]) {
             bat 'npm install'
-            bat 'npm install --save-dev @angular-devkit/build-angular'
-            bat 'npm install tslint typescript --save-dev'
+            bat 'npm install -g tslint '
         }
     }
 
