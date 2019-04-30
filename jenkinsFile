@@ -27,7 +27,7 @@ node {
     stage('NPM Install') {
         withEnv(["NPM_CONFIG_LOGLEVEL=warn"]) {
             bat 'npm install'
-            bat 'npm install -g tslint '
+  //          bat 'npm install -g tslint '
         }
     }
 
@@ -38,9 +38,9 @@ node {
        // junit '**/test-results.xml'
    // }
 
-    stage('Lint') {
-        bat 'ng lint'
-    }
+   // stage('Lint') {
+     //   bat 'ng lint'
+//    }
 
     stage('Build') {
         milestone()
